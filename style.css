@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -39,6 +40,16 @@ h1 {
   position: absolute;
   top: 100%;
   animation: float 4s ease-in-out infinite;
+}
+
+div.balloons {
+  pointer-events: none;
+}
+
+div.balloons div {
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
 }
 
 .sparkles {
