@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surprise Gift</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gift">
+  <div class="content">
+    <div class="gift-box" onclick="openGift()">🎁</div>
+    <h1>Click to reveal your virtual surprise!</h1>
+    <div class="popup" id="popup">
+      <p>🧸 You're the most special person, Saeed!</p>
+    </div>
+    <a href="wishes.html" class="btn">Previous</a>
+    <a href="final.html" class="btn">Next</a>
+  </div>
+  <script>
+    function openGift() {
+      document.getElementById('popup').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

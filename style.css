@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
+
+.balloons::before {
+  content: '🎈🎈🎈🎈🎈';
+  font-size: 3rem;
+  position: absolute;
+  top: 100%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.sparkles {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  animation: sparkle 3s infinite alternate;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.fireworks {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, #ffcc00 10%, transparent 10.01%) center/20px 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+.gift-box {
+  font-size: 5rem;
+  cursor: pointer;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.popup {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+.stars {
+  background: url('https://media.giphy.com/media/3ohs4BSacFKI7A717y/giphy.gif') center/cover no-repeat;
+  position: absolute;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
